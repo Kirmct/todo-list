@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas Simples</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Lista de Tarefas</h1>
+    <input type="text" name="adicionar" id="add" placeholder="Adicionar Nova Tarefa">
+    <ul class="item-list">
+      <li class="item">
+        <div class="item--content">
+          <input type="checkbox" value="item 1"><span>Item 1</span>
+        </div>
+        <a href="#" class="btn remover" onclick="alertar(event)">⛔</a>
+      </li>
+    </ul>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

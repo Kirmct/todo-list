@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  color: #e0e1dd;
+  list-style: none;
+}
+body {
+  background-color: #1b263b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #778da9;
+  border-radius: 4px;
+  min-width: 40vw;
+  max-width: 60vw;
+  padding: 30px;
+}
+.container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.container h1::after {
+  display: block;
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: #1b263b;
+}
+
+#add {
+  padding: 10px;
+  color: #1b263b;
+  font-size: 1.15rem;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+}
+#add::placeholder {
+  color: #415a77;
+}
+.item-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  font-size: 1.15rem;
+  background-color: #415a77;
+  border-radius: 4px;
+  align-items: center;
+  padding: 12px;
+  min-width: 90%;
+}
+
+.item--content {
+  width: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.item--content span {
+  max-width: 90%;
+  word-wrap: break-word;
+  font-size: 1.5rem;
+}
+.item--content input,
+span {
+  margin-right: 12px;
+}
+
+.item input:checked ~ span {
+  text-decoration: line-through;
+}
+
+.btn {
+  color: #1b263b;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
