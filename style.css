@@ -4,6 +4,7 @@
   font-family: monospace;
   color: #e0e1dd;
   list-style: none;
+  box-sizing: border-box;
 }
 body {
   background-color: #1b263b;
@@ -19,7 +20,7 @@ body {
   align-items: center;
   position: absolute;
   width: 50vw;
-  height: 30vh;
+  min-height: 30vh;
   background-color: #778da9;
   border-radius: 4px;
   display: none;
@@ -123,4 +124,28 @@ span {
   border: none;
   cursor: pointer;
   text-decoration: none;
+}
+
+@media (max-width: 650px) {
+  .modals {
+    width: 90vw;
+  }
+  .modal--content {
+    min-width: 90%;
+  }
+  .container {
+    min-width: 90vw;
+  }
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  .item--content span {
+    max-width: 80%;
+    font-size: 1rem;
+  }
+  #add,
+  .modal--content input {
+    font-size: 1rem;
+  }
 }

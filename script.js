@@ -2,6 +2,7 @@ const input = document.querySelector(`#add`);
 let data = 0;
 let lista = [];
 let dataAtual;
+let taskAtual;
 
 const adicionarItem = (e) => {
   if (e.key == `Enter`) {
@@ -66,7 +67,9 @@ function modificar(el) {
   let key;
 
   let parentElement = el.currentTarget.closest(`li`);
-
+  taskAtual = parentElement.querySelector(`span`).innerText;
+  console.log(taskAtual);
+  modal.querySelector(`span`).innerHTML = taskAtual;
   if (parentElement && parentElement.getAttribute(`data-key`)) {
     key = parentElement.getAttribute(`data-key`);
     dataAtual = key;
