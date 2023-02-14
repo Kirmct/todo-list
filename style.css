@@ -13,6 +13,33 @@ body {
   min-height: 100vh;
 }
 
+.modals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 50vw;
+  height: 30vh;
+  background-color: #778da9;
+  border-radius: 4px;
+  display: none;
+  z-index: 999;
+}
+.modal--content {
+  min-width: 300px;
+  gap: 30px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal--content label {
+  font-size: 1.5rem;
+}
+.modal--content input {
+  min-width: 100%;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -35,7 +62,8 @@ body {
   background-color: #1b263b;
 }
 
-#add {
+#add,
+.modal--content input {
   padding: 10px;
   color: #1b263b;
   font-size: 1.15rem;
@@ -43,7 +71,8 @@ body {
   outline: none;
   border: none;
 }
-#add::placeholder {
+#add::placeholder,
+.modal--content input {
   color: #415a77;
 }
 .item-list {
@@ -63,8 +92,13 @@ body {
   min-width: 90%;
 }
 
+.item--btns {
+  display: flex;
+  gap: 4px;
+}
+
 .item--content {
-  width: 98%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
